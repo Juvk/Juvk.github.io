@@ -1,0 +1,138 @@
+@import '../../css/media-queries';
+
+$bg: #F2F2F1;
+$article-title: #3d3d3d;
+$article-paragraph: #5d5d5d;
+
+* {
+  box-sizing: border-box; }
+
+html,body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  margin: 0; padding: 0;
+  background-color: $bg;
+  font-family: Arial, sans-serif;
+}
+
+.img{
+  background-image: url("../img/houseportugal.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  float:left;
+  margin-right: 2em;
+  height: 100vh;
+  width: 50%;
+}
+
+h1,h2,h3{
+  text-transform: uppercase;
+}
+
+div {
+  padding: 2em; }
+
+.header-title-first{
+  padding:0;
+  transform: skewY(4deg);
+  position: fixed;
+  margin: 343px 250px;
+  font-size: 4.5em;
+}
+.header-title-second{
+  padding:0;
+  transform: skewY(-11deg);
+  position: fixed;
+  width: 700px;
+  margin: 329px 320px;;
+  font-size:36px;
+  span{
+    &:nth-of-type(1){
+      font-size:0.8em;
+    }
+    &:nth-of-type(2){
+      font-size:0.8em;
+    }
+    &:nth-of-type(3){
+      font-size:0.8em;
+    }
+    &:nth-of-type(4){
+      font-size:0.8em;
+    }
+    &:nth-of-type(5){
+      font-size:0.9em;
+    }
+    &:nth-of-type(6){
+      font-size:0.9em;
+    }
+    &:nth-of-type(7){
+      font-size:1em;
+    }
+    &:nth-of-type(8){
+      font-size:1.1em;
+    }
+    &:nth-of-type(9){
+      font-size:1.1em;
+    }
+    &:nth-of-type(10){
+      font-size:1.2em;
+    }
+    &:nth-of-type(11){
+      font-size:1.3em;
+    }
+    &:nth-of-type(12){
+      font-size:1.4em;
+    }
+    &:nth-of-type(13){
+      font-size:1.6em;
+    }
+    &:nth-of-type(14){
+      font-size:1.7em;
+    }
+    &:nth-of-type(15){
+      font-size:1.8em;
+    }
+    &:nth-of-type(16){
+      font-size:1.9em;
+    }
+    &:nth-of-type(17){
+      font-size:2em;
+    }
+    &:nth-of-type(18){
+      font-size:2.1em;
+    }
+    &:nth-of-type(19){
+      font-size:2.2em;
+    }
+    &:nth-of-type(20){
+      font-size:2.3em;
+    }
+  }
+}
+.article{
+  p{
+    color: #2b2b2b;
+    font-size:12px;
+    -moz-column-width: 200px;
+    -webkit-column-width: 200px;
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+    column-width: 200px;
+    column-gap: 2em;
+    &:first-of-type{
+      font-weight: 700;
+    }
+  }
+  h1{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5em;
+    color: $article-title;
+  }
+  a{
+    text-decoration: none;
+    color: $article-paragraph;
+    font-size: 11px;
+  }
+}
