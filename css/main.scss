@@ -12,12 +12,15 @@ html,body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   margin: 0; padding: 0;
-  background-color: $bg;
+  background: url(../img/seasky.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
+  border-radius:2px;
   height: 300px;
   width: 800px;
   position: fixed;
@@ -38,11 +41,22 @@ ul{
   list-style:none;
   text-align: center;
   li{
-    display:inline;
-    padding: 0 15px;
-  }
-  img{
     border: 2px solid #3e3e3e;
+    display:inline-block;
+    margin: 0 15px;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+  }
+  li img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+  li:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
 }
