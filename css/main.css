@@ -9,7 +9,7 @@ html, body {
   -webkit-font-smoothing: antialiased !important;
   margin: 0;
   padding: 0;
-  background: url(../img/seasky.jpeg);
+  background-image: url(../img/seasky.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, sans-serif; }
