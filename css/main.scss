@@ -8,6 +8,10 @@ $article-paragraph: #5d5d5d;
 * {
   box-sizing: border-box; }
 
+html {
+  background-color: #000;
+}
+
 html,body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
