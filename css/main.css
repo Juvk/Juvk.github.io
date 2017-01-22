@@ -9,17 +9,13 @@ html, body {
   -webkit-font-smoothing: antialiased !important;
   margin: 0;
   padding: 0;
-  background-image: url(../img/seasky.jpeg);
+  background-image: url(../img/seaskybg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, sans-serif; }
 
 header {
-  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 2px;
-  height: 300px;
-  width: 800px;
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -29,29 +25,103 @@ header {
 h1, h2, h3 {
   text-transform: uppercase; }
 
+main {
+  padding: 30px; }
+
 ul {
-  padding: 20px 0;
-  margin: 0;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  margin: auto;
+  padding: 10px;
   list-style: none;
-  text-align: center; }
+  display: flex;
+  flex-wrap: wrap;
+  width: 67%;
+  align-content: space-around; }
   ul li {
     border: 2px solid #3e3e3e;
     display: inline-block;
-    margin: 0 15px;
+    margin: 20px;
     width: 350px;
     height: 250px;
     overflow: hidden; }
-  ul li img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .2s ease-in-out;
-    transition: .2s ease-in-out; }
-  ul li:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
 
-@media screen and (max-width: 700px) {
-  html, body {
-    background: url(../img/mobilebg.jpg) !important; } }
+figure {
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  background: #3e3e3e; }
+  figure img {
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease; }
+  figure:hover img {
+    opacity: 0.5; }
+
+.figcaption {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease; }
+  .figcaption__bottom {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    margin: 0; }
+    .figcaption__bottom__link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0; }
+  .figcaption__header {
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0;
+    position: relative; }
+    .figcaption__header i {
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      font-size: 20px; }
+  .figcaption__description {
+    text-align: center; }
+
+figure:hover .figcaption {
+  opacity: 1; }
+
+figure:before {
+  content: "";
+  position: absolute;
+  font-weight: 800;
+  background: transparent;
+  text-shadow: 0 0 5px white;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 0.6s ease;
+  opacity: 0.75; }
+
+figure:hover:before {
+  opacity: 0; }
+
+.cap-bot:before {
+  bottom: 10px;
+  left: 10px; }
+
+.cap-bot .figcaption {
+  left: 0;
+  right: 0;
+  bottom: -30%; }
+
+.cap-bot:hover .figcaption {
+  bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
