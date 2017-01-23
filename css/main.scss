@@ -178,3 +178,8 @@ figure:hover:before {
 .cap-bot:hover .figcaption {
   bottom: 0;
 }
+@media only screen and (max-width: 414px) {
+  ul{
+    width: 52%!important;
+  }
+}
