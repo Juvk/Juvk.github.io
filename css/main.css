@@ -12,7 +12,7 @@ html, body {
   background-image: url(../img/seaskybg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: Arial, sans-serif; }
+  font-family: 'Open Sans', Arial, sans-serif; }
 
 header {
   border-radius: 2px;
@@ -22,11 +22,19 @@ header {
   left: 0;
   margin: auto; }
 
-h1, h2, h3 {
+h1, h2 {
   text-transform: uppercase; }
 
 main {
   padding: 30px; }
+
+.main__heading {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  color: #606061;
+  font-weight: 300;
+  font-size: 13px; }
 
 ul {
   background-color: rgba(255, 255, 255, 0.7) !important;
@@ -38,9 +46,10 @@ ul {
   width: 67%;
   align-content: space-around; }
   ul li {
+    position: relative;
     border: 2px solid #3e3e3e;
     display: inline-block;
-    margin: 20px;
+    margin: 20px auto;
     width: 350px;
     height: 250px;
     overflow: hidden; }
@@ -58,7 +67,7 @@ figure {
     -moz-transition: all 0.6s ease;
     -o-transition: all 0.6s ease; }
   figure:hover img {
-    opacity: 0.5; }
+    opacity: 0.3; }
 
 .figcaption {
   position: absolute;
@@ -90,7 +99,12 @@ figure {
       bottom: 20px;
       font-size: 20px; }
   .figcaption__description {
-    text-align: center; }
+    text-align: center;
+    opacity: 0;
+    padding: 0 20px 50px;
+    -moz-transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease; }
 
 figure:hover .figcaption {
   opacity: 1; }
@@ -107,7 +121,9 @@ figure:before {
   font-size: 14px;
   line-height: 24px;
   -moz-transition: all 0.6s ease;
-  opacity: 0.75; }
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0.3; }
 
 figure:hover:before {
   opacity: 0; }
@@ -123,5 +139,11 @@ figure:hover:before {
 
 .cap-bot:hover .figcaption {
   bottom: 0; }
+  .cap-bot:hover .figcaption__description {
+    opacity: 1; }
+
+@media only screen and (max-width: 414px) {
+  ul {
+    width: 52% !important; } }
 
 /*# sourceMappingURL=main.css.map */

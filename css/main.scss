@@ -19,7 +19,7 @@ html,body {
   background-image: url(../img/seaskybg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 header {
@@ -35,11 +35,19 @@ header {
   margin: auto;
 }
 
-h1,h2,h3{
+h1,h2{
   text-transform: uppercase;
 }
 main{
   padding:30px;
+}
+.main__heading{
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  color: #606061;
+  font-weight: 300;
+  font-size: 13px;
 }
 
 ul{
@@ -55,6 +63,7 @@ ul{
   width: 67%;
   align-content: space-around;
   li{
+    position: relative;
     border: 2px solid #3e3e3e;
     display:inline-block;
     margin: 20px auto;
@@ -97,18 +106,15 @@ figure {
   }
   &:hover{
     img{
-      opacity: 0.5;
+      opacity: 0.3;
     }
   }
 }
 .figcaption {
   position: absolute;
-  //background: black;
-  //background: rgba(0,0,0,0.75);
   color: white;
   font-weight: 600;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  //padding: 10px 20px;
   opacity: 0;
   -webkit-transition: all 0.6s ease;
   -moz-transition:    all 0.6s ease;
@@ -126,8 +132,6 @@ figure {
     }
   }
   &__header{
-    //background: #000;
-    //width: 100%;
     text-transform: uppercase;
     padding: 10px;
     margin: 0;
@@ -141,6 +145,11 @@ figure {
   }
   &__description{
     text-align: center;
+    opacity: 0;
+    padding: 0 20px 50px;
+    -moz-transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
   }
 }
 figure:hover .figcaption {
@@ -150,17 +159,17 @@ figure:before {
   content: "";
   position: absolute;
   font-weight: 800;
-  //background: black;
   background: transparent;
   text-shadow: 0 0 5px white;
-  //color: black;
   width: 24px;
   height: 24px;
   text-align: center;
   font-size: 14px;
   line-height: 24px;
   -moz-transition: all 0.6s ease;
-  opacity: 0.75;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  opacity: 0.3;
 }
 figure:hover:before {
   opacity: 0;
@@ -177,6 +186,9 @@ figure:hover:before {
 }
 .cap-bot:hover .figcaption {
   bottom: 0;
+  &__description {
+    opacity: 1;
+  }
 }
 @media only screen and (max-width: 414px) {
   ul{
